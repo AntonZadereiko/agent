@@ -28,6 +28,9 @@
     flex-grow: 1;
     header{
     padding: 15px 0;
+    @include max-screen(767px){
+        padding-left: 10px;
+    }
     .container{
         display: flex;
         align-items: center;
@@ -165,13 +168,26 @@
 .main_banner{
     padding: 20px 0;
     background-color: gainsboro;
+    @include max-screen(1300px){
+         padding-left: 15px;
+    }
     .container{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include max-screen(1015px){
+            flex-direction: column;
+            align-items: center;
+        }
         .main_banner_box{
             max-width: 400px;
+            @include max-screen(1015px){
+                margin-bottom: 40px;
+            }
             h1{
+                @include max-screen(1015px){
+                    padding-top: 30px;
+                }
                 margin-bottom: 25px;
                 font-family: $font;
                 font-size: 48px;
@@ -189,16 +205,30 @@
                 color: gray;
             }
         }
+        .main_banner_image{
+            max-width: 618px;
+            
+            img{
+                width: 100%;
+            }
+        }
     }
 }
 .membership{
     padding: 70px 0;
+    @include max-screen(1300px){
+        padding-left: 15px;
+        padding-right: 15px;
+   }
     .container{
         .membership_titles{
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 64px;
+            @include max-screen(600px){
+                display: block;
+           }
             p{
                 color: rgb(0, 0, 0);
                 font-family: $font;
@@ -207,6 +237,9 @@
                 line-height: 32px;
                 letter-spacing: 0%;
                 text-align: left;
+                @include max-screen(600px){
+                    margin-bottom: 20px;
+               }
                 span{
                     color: rgb(0, 0, 0);
                     font-family: $font;
@@ -232,6 +265,10 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
+            @include max-screen(770px){
+                flex-direction: column;
+                align-items: flex-start;
+           }
             .membership_box_item{
                 width: 370px;
                 &:nth-child(4){

@@ -27,6 +27,11 @@
 .wrapper header {
   padding: 15px 0;
 }
+@media screen and (max-width: 767px) {
+  .wrapper header {
+    padding-left: 10px;
+  }
+}
 .wrapper header .container {
   display: flex;
   align-items: center;
@@ -177,13 +182,29 @@
   padding: 20px 0;
   background-color: gainsboro;
 }
+@media screen and (max-width: 1300px) {
+  .main_banner {
+    padding-left: 15px;
+  }
+}
 .main_banner .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 1015px) {
+  .main_banner .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .main_banner .container .main_banner_box {
   max-width: 400px;
+}
+@media screen and (max-width: 1015px) {
+  .main_banner .container .main_banner_box {
+    margin-bottom: 40px;
+  }
 }
 .main_banner .container .main_banner_box h1 {
   margin-bottom: 25px;
@@ -194,6 +215,11 @@
   letter-spacing: 0%;
   color: black;
 }
+@media screen and (max-width: 1015px) {
+  .main_banner .container .main_banner_box h1 {
+    padding-top: 30px;
+  }
+}
 .main_banner .container .main_banner_box p {
   font-family: "Roboto", sans-serif;
   font-size: 17px;
@@ -202,15 +228,32 @@
   letter-spacing: 0%;
   color: gray;
 }
+.main_banner .container .main_banner_image {
+  max-width: 618px;
+}
+.main_banner .container .main_banner_image img {
+  width: 100%;
+}
 
 .membership {
   padding: 70px 0;
+}
+@media screen and (max-width: 1300px) {
+  .membership {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .membership .container .membership_titles {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 64px;
+}
+@media screen and (max-width: 600px) {
+  .membership .container .membership_titles {
+    display: block;
+  }
 }
 .membership .container .membership_titles p {
   color: rgb(0, 0, 0);
@@ -220,6 +263,11 @@
   line-height: 32px;
   letter-spacing: 0%;
   text-align: left;
+}
+@media screen and (max-width: 600px) {
+  .membership .container .membership_titles p {
+    margin-bottom: 20px;
+  }
 }
 .membership .container .membership_titles p span {
   color: rgb(0, 0, 0);
@@ -244,6 +292,12 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 770px) {
+  .membership .container .membership_box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .membership .container .membership_box .membership_box_item {
   width: 370px;
