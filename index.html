@@ -7,20 +7,28 @@
     <link rel="stylesheet" href="scss/style.css">
 </head>
 <body>
+    <div class="wrapper">
     <header>
         <div class="container">
         <div class="logo">
            <a href="#"> <img src="images/logo.svg" alt="Logo"></a>
         </div>
-        <div class="registration">
+            <nav>
         <ul>
             <li><a href="#">Why landing?</a></li>
             <li><a href="#">Resourses</a></li>
         </ul>
         <button>Sign in</button>
+    </nav>
+        
+    
+    
+    <div class="burger">
+        <span></span>
     </div>
     </div>
     </header>
+</div>
     <main>
         <section class="main_banner">
             <div class="container">
@@ -337,5 +345,11 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.querySelector('.burger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('nav').classList.toggle('open');
+        })
+    </script>
 </body>
 </html>
