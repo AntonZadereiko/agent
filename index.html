@@ -346,10 +346,36 @@
         </div>
     </footer>
     <script>
-        document.querySelector('.burger').addEventListener('click', function() {
+       /* document.querySelector('.burger').addEventListener('click', function() {
             this.classList.toggle('active');
             document.querySelector('nav').classList.toggle('open');
-        })
+        }) */
+        document.addEventListener('DOMContentLoaded', function() {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav');
+    const links = document.querySelectorAll('nav ul li a');
+
+
+    burger.addEventListener('click', function() {
+        nav.classList.toggle('open');
+        burger.classList.toggle('active');
+    });
+
+    
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (nav.classList.contains('open')) {
+                nav.classList.remove('open');
+                burger.classList.remove('active');
+            }
+            
+            setTimeout(() => {
+                window.location.href = this.href;
+            }, 400); // затримка в 400 мс (тривалість анімації)
+            e.preventDefault(); // запобігаємо стандартному переходу
+        });
+    });
+});
     </script>
 </body>
 </html>
